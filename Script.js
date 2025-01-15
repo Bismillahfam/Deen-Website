@@ -9,7 +9,8 @@ NamazForm.addEventListener("submit", async event => {
     if (city) {
         try {
             const NamazData = await GetNamazData(city)
-            console
+            DisplayNamazTimes(NamazData)
+
         } catch (error) { console.error(error) };
     }
 })
@@ -37,4 +38,16 @@ async function GetNamazData(city) {
     return NamazTimes
 }
 
-GetNamazData()
+function DisplayNamazTimes(NamazData) {
+    let FajrTime = document.querySelector(".FajrTime")
+    let DhuhrTime = document.querySelector(".DhuhrTime")
+    let AsrTime = document.querySelector(".AsrTime")
+    let MaghribTime = document.querySelector(".MaghribTime")
+    let IshaTime = document.querySelector(".IshaTime")
+
+    FajrTime.textContent = NamazData[0]
+    DhuhrTime.textContent = NamazData[1]
+    AsrTime.textContent = NamazData[2]
+    MaghribTime.textContent = NamazData[3]
+    IshaTime.textContent = NamazData[4]
+}
