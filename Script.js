@@ -39,11 +39,13 @@ async function GetNamazData(city) {
 }
 
 function DisplayNamazTimes(NamazData) {
-    let FajrTime = document.querySelector(".FajrTime")
-    let DhuhrTime = document.querySelector(".DhuhrTime")
-    let AsrTime = document.querySelector(".AsrTime")
-    let MaghribTime = document.querySelector(".MaghribTime")
-    let IshaTime = document.querySelector(".IshaTime")
+    const NamazNames = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"]
+
+    for (i in NamazNames) {
+        this[NamazNames[i] + 'GMT'] = document.querySelector(eval("'.' + NamazNames[i] + 'GMT'")) //Apparently eval() is a substantial security risk, Create a backup patch should this be exploited
+        this[NamazNames[i] + 'Time'] = document.querySelector(eval("'.' + NamazNames[i] + 'Time'"))
+    }
+    console.log(FajrGMT)
 
     FajrTime.textContent = NamazData[0]
     DhuhrTime.textContent = NamazData[1]
