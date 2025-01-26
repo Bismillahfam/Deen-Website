@@ -24,6 +24,11 @@
         font-size: 70px;
         margin-bottom: 20px;
     }
+
+    p {
+
+        padding-left: 16px;
+    }
 }
 
 ul {
@@ -53,7 +58,7 @@ ul {
 
 
 /* Table container styling */
-.PrayerTimes {
+.Body {
     margin: 20px auto;
     padding: 15px;
     width: 90%;
@@ -62,8 +67,15 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.Table_Links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /* Table styling */
 .NamaazTable {
+
     width: 100%;
     border-collapse: collapse;
     text-align: left;
@@ -112,6 +124,7 @@ button {
 
 button {
     background-color: var(--BaseCol);
+    width: 185px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -119,4 +132,9 @@ button {
 
 button:hover {
     background-color: var(--HoverCol);
+}
+
+.HadithImage {
+    width: 200px;
+    margin-right: 100px;
 }
