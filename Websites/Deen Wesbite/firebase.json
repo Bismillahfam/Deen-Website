@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "deen",
+    "site": "deen-website-from-ahsan",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

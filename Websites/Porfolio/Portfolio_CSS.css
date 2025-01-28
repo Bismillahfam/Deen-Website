@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+}
+
+header {
+    background: #282c34;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner a {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banner a :hover {
+    background: #004fa3;
+}
+
+nav {
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
