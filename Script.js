@@ -1,19 +1,26 @@
-const NamazForm = document.querySelector(".NamazForm")
-const CityInput = document.querySelector(".CityInput")
+const NamazForm = document.querySelector(".NamazForm");
+const CityInput = document.querySelector(".CityInput");
 
 NamazForm.addEventListener("submit", async event => {
     event.preventDefault();
 
-    const city = CityInput.value
+    const city = CityInput.value;
+    const invalidChars = /[\/.<>,":;@!]/; // Regex for invalid characters
 
-    if (city) {
-        try {
-            const [NamazData, timezone] = await GetNamazData(city)
-            DisplayNamazTimes(NamazData, timezone)
 
-        } catch (error) { console.error(error) };
+    if (!city || invalidChars.test(city)) {
+        alert("Invalid city name. Please avoid using '/', '.', '<', '>', '!', '@', ';' etc in the city name.");
+        return;
     }
-})
+
+    try {
+        const [NamazData, timezone] = await GetNamazData(city);
+        DisplayNamazTimes(NamazData, timezone);
+    } catch (error) {
+        console.error(error);
+    }
+});
+
 
 
 async function GetNamazData(city) {
@@ -26,8 +33,9 @@ async function GetNamazData(city) {
     const APIresponse = await (await fetch(APIurl)).json();
     console.log(APIresponse)
 
-    const { data, ...rest } = APIresponse
+    const { code, data, ...rest } = APIresponse
     console.log(data)
+    console.log(code)
 
     const { timings, meta, ...rest2 } = data
     console.log(timings, meta)
