@@ -66,15 +66,40 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.HadithOfTheDay,
 .GithubButton {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Aligns text vertically */
     padding: 10px;
+    margin: 20px;
     background-color: #eaeaea;
-    /* Dark border for visibility */
     border-radius: 10px;
-    /* Slightly rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Adds a subtle shadow */
+    height: 300px;
+
+    /* Ensure same width */
+}
+
+.GithubButton {
+    width: 250px;
+}
+
+.HadithOfTheDay {
+    width: 1000px;
+    padding-left: 30px;
+
+    h3 {
+        padding-bottom: 0px;
+        font-size: 50px;
+    }
+
+    p {
+        padding-bottom: 110px;
+        font-style: italic;
+        font-size: 35px;
+    }
 }
 
 
@@ -148,4 +173,12 @@ button:hover {
 .HadithImage {
     width: 200px;
     margin-right: 100px;
+}
+
+.ButtonContainer {
+    display: flex;
+    align-items: stretch;
+    /* Ensures both items have the same height */
+    gap: 20px;
+    /* Adds space between them */
 }
