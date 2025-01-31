@@ -84,11 +84,18 @@ ul {
 
 .GithubButton {
     width: 250px;
+    transition: 0.5s;
+}
+
+.GithubButton:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 5px 10px #9b9662;
 }
 
 .HadithOfTheDay {
     width: 1000px;
     padding-left: 30px;
+    transition-duration: 0.5s;
 
     h3 {
         padding-bottom: 0px;
@@ -100,6 +107,11 @@ ul {
         font-style: italic;
         font-size: 25px;
     }
+}
+
+.HadithOfTheDay:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 5px 10px #9b9662;
 }
 
 

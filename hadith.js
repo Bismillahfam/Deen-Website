@@ -9,4 +9,8 @@ const HadithArray = [
 ]
 
 const Hadith = Math.floor(Math.random() * 4)
-HadithText.textContent = HadithArray[Hadith]
+showHadith(Hadith)
+
+function showHadith(Hadith) {
+    HadithText.textContent = ("\"" + HadithArray[Hadith] + "\"")
+}
